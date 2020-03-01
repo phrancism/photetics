@@ -4,7 +4,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
     
-    let currentLanguage: Language = .italian
+    let currentLanguage: Language = .tagalog
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +33,14 @@ class ViewController: UIViewController {
     }
     
     private func createPhotopheme(for phonemeString: String) -> UIColor? {
-        guard let phoneme = PhonemeMap.default[phonemeString] else { return nil }
-        
-        let values = HSBValueFactory.createValues(for: phoneme, language: currentLanguage)
+        guard let phoneme = PhonemeMap.default[phonemeString],
+            let phonemeHSL = phoneme as? HSBRepresentable
+            else { return nil }
         
         return UIColor(
-                hue: values.hue.cgFloat,
-            saturation: values.saturation.cgFloat,
-            brightness: values.brightness.cgFloat,
+            hue: phonemeHSL.hue.cgFloat,
+            saturation: phonemeHSL.saturation.cgFloat,
+            brightness: phonemeHSL.brightness.cgFloat,
             alpha: 1
         )
     }
@@ -48,12 +48,6 @@ class ViewController: UIViewController {
 
 extension ViewController {
     var defaultColor: UIColor { .black }
-}
-
-fileprivate protocol HSLRepresentable {
-    var hue: CGFloat { get }
-    var saturation: CGFloat { get }
-    var brightness: CGFloat { get }
 }
 
 extension Double {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB024636240B73C600F84210 /* HSBValueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB024635240B73C600F84210 /* HSBValueFactory.swift */; };
+		BB024636240B73C600F84210 /* HSBRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB024635240B73C600F84210 /* HSBRepresentable.swift */; };
 		BB2CBAF22407651E0055BDE5 /* Consonant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF12407651E0055BDE5 /* Consonant.swift */; };
 		BB2CBAF42407662A0055BDE5 /* Phoneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF32407662A0055BDE5 /* Phoneme.swift */; };
 		BB2CBAF62407665E0055BDE5 /* Vowel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF52407665E0055BDE5 /* Vowel.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB024635240B73C600F84210 /* HSBValueFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBValueFactory.swift; sourceTree = "<group>"; };
+		BB024635240B73C600F84210 /* HSBRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBRepresentable.swift; sourceTree = "<group>"; };
 		BB2CBAF12407651E0055BDE5 /* Consonant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consonant.swift; sourceTree = "<group>"; };
 		BB2CBAF32407662A0055BDE5 /* Phoneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phoneme.swift; sourceTree = "<group>"; };
 		BB2CBAF52407665E0055BDE5 /* Vowel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vowel.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4675BE240620EA0017ED2F /* ViewController.swift */,
-				BB024635240B73C600F84210 /* HSBValueFactory.swift */,
+				BB024635240B73C600F84210 /* HSBRepresentable.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				BB2CBB05240769840055BDE5 /* CanvasView.swift in Sources */,
 				BB4675BD240620EA0017ED2F /* SceneDelegate.swift in Sources */,
 				BB2CBB0E24076D8B0055BDE5 /* Poem.swift in Sources */,
-				BB024636240B73C600F84210 /* HSBValueFactory.swift in Sources */,
+				BB024636240B73C600F84210 /* HSBRepresentable.swift in Sources */,
 				BB2CBAFE240767960055BDE5 /* Backness.swift in Sources */,
 				BBEAB342240A2FB2001DE616 /* PhonemeMap.swift in Sources */,
 			);
