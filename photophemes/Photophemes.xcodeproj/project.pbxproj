@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		BB024636240B73C600F84210 /* HSBRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB024635240B73C600F84210 /* HSBRepresentable.swift */; };
 		BB2CBAF22407651E0055BDE5 /* Consonant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF12407651E0055BDE5 /* Consonant.swift */; };
-		BB2CBAF42407662A0055BDE5 /* Phoneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF32407662A0055BDE5 /* Phoneme.swift */; };
+		BB2CBAF42407662A0055BDE5 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF32407662A0055BDE5 /* Phone.swift */; };
 		BB2CBAF62407665E0055BDE5 /* Vowel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF52407665E0055BDE5 /* Vowel.swift */; };
 		BB2CBAF8240767520055BDE5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF7240767520055BDE5 /* Place.swift */; };
 		BB2CBAFA240767670055BDE5 /* Manner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAF9240767670055BDE5 /* Manner.swift */; };
 		BB2CBAFC240767820055BDE5 /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAFB240767820055BDE5 /* Height.swift */; };
 		BB2CBAFE240767960055BDE5 /* Backness.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAFD240767960055BDE5 /* Backness.swift */; };
-		BB2CBB002407688D0055BDE5 /* phonemes.json in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBAFF2407688D0055BDE5 /* phonemes.json */; };
+		BB2CBB002407688D0055BDE5 /* phones.json in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBAFF2407688D0055BDE5 /* phones.json */; };
 		BB2CBB05240769840055BDE5 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBB04240769840055BDE5 /* CanvasView.swift */; };
 		BB2CBB0A24076D510055BDE5 /* poem-tl.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBB0724076D510055BDE5 /* poem-tl.txt */; };
 		BB2CBB0B24076D510055BDE5 /* poem-en.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBB0824076D510055BDE5 /* poem-en.txt */; };
@@ -28,19 +28,19 @@
 		BB4675C4240620EB0017ED2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4675C3240620EB0017ED2F /* Assets.xcassets */; };
 		BB4675C7240620EB0017ED2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4675C5240620EB0017ED2F /* LaunchScreen.storyboard */; };
 		BBEAB340240A2C7B001DE616 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAB33F240A2C7B001DE616 /* Language.swift */; };
-		BBEAB342240A2FB2001DE616 /* PhonemeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAB341240A2FB2001DE616 /* PhonemeMap.swift */; };
+		BBEAB342240A2FB2001DE616 /* PhoneMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAB341240A2FB2001DE616 /* PhoneMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB024635240B73C600F84210 /* HSBRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBRepresentable.swift; sourceTree = "<group>"; };
 		BB2CBAF12407651E0055BDE5 /* Consonant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consonant.swift; sourceTree = "<group>"; };
-		BB2CBAF32407662A0055BDE5 /* Phoneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phoneme.swift; sourceTree = "<group>"; };
+		BB2CBAF32407662A0055BDE5 /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
 		BB2CBAF52407665E0055BDE5 /* Vowel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vowel.swift; sourceTree = "<group>"; };
 		BB2CBAF7240767520055BDE5 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BB2CBAF9240767670055BDE5 /* Manner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manner.swift; sourceTree = "<group>"; };
 		BB2CBAFB240767820055BDE5 /* Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Height.swift; sourceTree = "<group>"; };
 		BB2CBAFD240767960055BDE5 /* Backness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backness.swift; sourceTree = "<group>"; };
-		BB2CBAFF2407688D0055BDE5 /* phonemes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phonemes.json; sourceTree = "<group>"; };
+		BB2CBAFF2407688D0055BDE5 /* phones.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phones.json; sourceTree = "<group>"; };
 		BB2CBB04240769840055BDE5 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		BB2CBB0724076D510055BDE5 /* poem-tl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-tl.txt"; sourceTree = "<group>"; };
 		BB2CBB0824076D510055BDE5 /* poem-en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-en.txt"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		BB4675C6240620EB0017ED2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4675C8240620EB0017ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBEAB33F240A2C7B001DE616 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		BBEAB341240A2FB2001DE616 /* PhonemeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonemeMap.swift; sourceTree = "<group>"; };
+		BBEAB341240A2FB2001DE616 /* PhoneMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		BB2CBB01240768B20055BDE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CBAFF2407688D0055BDE5 /* phonemes.json */,
+				BB2CBAFF2407688D0055BDE5 /* phones.json */,
 				BB2CBB0824076D510055BDE5 /* poem-en.txt */,
 				BB2CBB0924076D510055BDE5 /* poem-it.txt */,
 				BB2CBB0724076D510055BDE5 /* poem-tl.txt */,
@@ -83,7 +83,7 @@
 		BB2CBB02240768EC0055BDE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CBAF32407662A0055BDE5 /* Phoneme.swift */,
+				BB2CBAF32407662A0055BDE5 /* Phone.swift */,
 				BB2CBAF12407651E0055BDE5 /* Consonant.swift */,
 				BB2CBAF7240767520055BDE5 /* Place.swift */,
 				BB2CBAF9240767670055BDE5 /* Manner.swift */,
@@ -92,7 +92,7 @@
 				BB2CBAFD240767960055BDE5 /* Backness.swift */,
 				BB2CBB0D24076D8B0055BDE5 /* Poem.swift */,
 				BBEAB33F240A2C7B001DE616 /* Language.swift */,
-				BBEAB341240A2FB2001DE616 /* PhonemeMap.swift */,
+				BBEAB341240A2FB2001DE616 /* PhoneMap.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB2CBB002407688D0055BDE5 /* phonemes.json in Resources */,
+				BB2CBB002407688D0055BDE5 /* phones.json in Resources */,
 				BB4675C7240620EB0017ED2F /* LaunchScreen.storyboard in Resources */,
 				BB2CBB0C24076D510055BDE5 /* poem-it.txt in Resources */,
 				BB4675C4240620EB0017ED2F /* Assets.xcassets in Resources */,
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2CBAFA240767670055BDE5 /* Manner.swift in Sources */,
-				BB2CBAF42407662A0055BDE5 /* Phoneme.swift in Sources */,
+				BB2CBAF42407662A0055BDE5 /* Phone.swift in Sources */,
 				BB2CBAFC240767820055BDE5 /* Height.swift in Sources */,
 				BB2CBAF62407665E0055BDE5 /* Vowel.swift in Sources */,
 				BB4675BF240620EA0017ED2F /* ViewController.swift in Sources */,
@@ -236,7 +236,7 @@
 				BB2CBB0E24076D8B0055BDE5 /* Poem.swift in Sources */,
 				BB024636240B73C600F84210 /* HSBRepresentable.swift in Sources */,
 				BB2CBAFE240767960055BDE5 /* Backness.swift in Sources */,
-				BBEAB342240A2FB2001DE616 /* PhonemeMap.swift in Sources */,
+				BBEAB342240A2FB2001DE616 /* PhoneMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

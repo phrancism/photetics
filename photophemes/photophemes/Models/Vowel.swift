@@ -1,6 +1,6 @@
 import Foundation
 
-struct Vowel: Phoneme, Decodable {
+struct Vowel: Phone, Decodable {
     let letter: String
     let backness: Backness
     let height: Height

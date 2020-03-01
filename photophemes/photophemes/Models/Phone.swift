@@ -1,5 +1,5 @@
 import Foundation
 
-protocol Phoneme: Decodable {
+protocol Phone: Decodable {
     var letter: String { get }
 }

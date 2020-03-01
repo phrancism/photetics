@@ -4,12 +4,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
     
-    let currentLanguage: Language = .tagalog
+    let currentLanguage: Language = .english
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let line = getPoemLines(language: currentLanguage)[0].replacingOccurrences(of: " ", with: "")
+        let line = getPoemLines(language: currentLanguage)[4].replacingOccurrences(of: " ", with: "")
         let lineArray = line.map { String($0) }
         print(lineArray)
         let colors: [CGColor] = lineArray.map { char in
@@ -32,15 +32,15 @@ class ViewController: UIViewController {
         return lines
     }
     
-    private func createPhotopheme(for phonemeString: String) -> UIColor? {
-        guard let phoneme = PhonemeMap.default[phonemeString],
-            let phonemeHSL = phoneme as? HSBRepresentable
+    private func createPhotopheme(for phoneString: String) -> UIColor? {
+        guard let phone = PhoneMap.default[phoneString],
+            let phoneHSL = phone as? HSBRepresentable
             else { return nil }
         
         return UIColor(
-            hue: phonemeHSL.hue.cgFloat,
-            saturation: phonemeHSL.saturation.cgFloat,
-            brightness: phonemeHSL.brightness.cgFloat,
+            hue: phoneHSL.hue.cgFloat,
+            saturation: phoneHSL.saturation.cgFloat,
+            brightness: phoneHSL.brightness.cgFloat,
             alpha: 1
         )
     }
