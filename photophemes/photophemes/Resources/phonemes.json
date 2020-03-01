@@ -1,0 +1,582 @@
+{
+    "consonants": [
+        {
+            "letter": "p",
+            "place": "bilabial",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "b",
+            "place": "bilabial",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "t",
+            "place": "alveolar",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "d",
+            "place": "alveolar",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʈ",
+            "place": "retroflex",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɖ",
+            "place": "retroflex",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "c",
+            "place": "palatal",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɟ",
+            "place": "palatal",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "k",
+            "place": "velar",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "g",
+            "place": "velar",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "q",
+            "place": "uvular",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɢ",
+            "place": "uvular",
+            "manner": "plosive",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʡ",
+            "place": "pharyngeal",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʔ",
+            "place": "glottal",
+            "manner": "plosive",
+            "isVoiced": false
+        },
+        {
+            "letter": "m",
+            "place": "bilabial",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɱ",
+            "place": "labiodental",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "n",
+            "place": "alveolar",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɳ",
+            "place": "retroflex",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɲ",
+            "place": "palatal",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ŋ",
+            "place": "velar",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɴ",
+            "place": "uvular",
+            "manner": "nasal",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʙ",
+            "place": "bilabial",
+            "manner": "trill",
+            "isVoiced": true
+        },
+        {
+            "letter": "r",
+            "place": "alveolar",
+            "manner": "trill",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʀ",
+            "place": "uvular",
+            "manner": "trill",
+            "isVoiced": true
+        },
+        {
+            "letter": "ⱱ",
+            "place": "bilabial",
+            "manner": "flap",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɾ",
+            "place": "alveolar",
+            "manner": "flap",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɽ",
+            "place": "retroflex",
+            "manner": "flap",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɸ",
+            "place": "bilabial",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "β",
+            "place": "bilabial",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "f",
+            "place": "labiodental",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "v",
+            "place": "labiodental",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "θ",
+            "place": "dental",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ð",
+            "place": "dental",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "s",
+            "place": "alveolar",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "z",
+            "place": "alveolar",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʃ",
+            "place": "postalveolar",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʒ",
+            "place": "postalveolar",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʂ",
+            "place": "retroflex",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʐ",
+            "place": "retroflex",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ç",
+            "place": "palatal",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {   
+            "letter": "ʝ",
+            "place": "palatal",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "x",
+            "place": "velar",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɣ",
+            "place": "velar",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "χ",
+            "place": "uvular",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʁ",
+            "place": "uvular",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ħ",
+            "place": "pharyngeal",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʕ",
+            "place": "pharyngeal",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "h",
+            "place": "glottal",
+            "manner": "fricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɦ",
+            "place": "glottal",
+            "manner": "fricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʦ",
+            "place": "alveolar",
+            "manner": "affricate",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʣ",
+            "place": "alveolar",
+            "manner": "affricate",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʧ",
+            "place": "postalveolar",
+            "manner": "affricate",
+            "isVoiced": false
+        },
+        {
+            "letter": "ʤ",
+            "place": "postalveolar",
+            "manner": "affricate",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɬ",
+            "place": "alveolar",
+            "manner": "lateralFricative",
+            "isVoiced": false
+        },
+        {
+            "letter": "ɮ",
+            "place": "alveolar",
+            "manner": "lateralFricative",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʋ",
+            "place": "labiodental",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɹ",
+            "place": "alveolar",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɻ",
+            "place": "retroflex",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "j",
+            "place": "palatal",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɰ",
+            "place": "velar",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "w",
+            "place": "velar",
+            "manner": "approximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "l",
+            "place": "alveolar",
+            "manner": "lateralApproximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ɭ",
+            "place": "retroflex",
+            "manner": "lateralApproximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʎ",
+            "place": "palatal",
+            "manner": "lateralApproximant",
+            "isVoiced": true
+        },
+        {
+            "letter": "ʟ",
+            "place": "velar",
+            "manner": "lateralApproximant",
+            "isVoiced": true
+        }
+    ],
+    "vowels": [
+        {
+            "letter": "i",
+            "height": "close",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "y",
+            "height": "close",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ɨ",
+            "height": "close",
+            "backness": "central",
+            "isRounded": false
+        },
+        {
+            "letter": "ʉ",
+            "height": "close",
+            "backness": "central",
+            "isRounded": true
+        },
+        {
+            "letter": "ɯ",
+            "height": "close",
+            "backness": "back",
+            "isRounded": false
+        },
+        {
+            "letter": "u",
+            "height": "close",
+            "backness": "back",
+            "isRounded": true
+        },
+        {
+            "letter": "ɪ",
+            "height": "nearClose",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "ʏ",
+            "height": "nearClose",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ʊ",
+            "height": "nearClose",
+            "backness": "back",
+            "isRounded": true
+        },
+        {
+            "letter": "e",
+            "height": "closeMid",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "ø",
+            "height": "closeMid",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ɘ",
+            "height": "closeMid",
+            "backness": "central",
+            "isRounded": false
+        },
+        {
+            "letter": "ɵ",
+            "height": "closeMid",
+            "backness": "central",
+            "isRounded": true
+        },
+        {
+            "letter": "ɤ",
+            "height": "closeMid",
+            "backness": "back",
+            "isRounded": false
+        },
+        {
+            "letter": "o",
+            "height": "closeMid",
+            "backness": "back",
+            "isRounded": true
+        },
+        {
+            "letter": "ø̞",
+            "height": "mid",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ə",
+            "height": "mid",
+            "backness": "central",
+            "isRounded": true
+        },
+        {
+            "letter": "o̞",
+            "height": "mid",
+            "backness": "back",
+            "isRounded": true
+        },
+        {
+            "letter": "ɛ",
+            "height": "openMid",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "œ",
+            "height": "openMid",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ɜ",
+            "height": "openMid",
+            "backness": "central",
+            "isRounded": false
+        },
+        {
+            "letter": "ɞ",
+            "height": "openMid",
+            "backness": "central",
+            "isRounded": true
+        },
+        {
+            "letter": "ʌ",
+            "height": "openMid",
+            "backness": "back",
+            "isRounded": false
+        },
+        {
+            "letter": "ɔ",
+            "height": "openMid",
+            "backness": "back",
+            "isRounded": true
+        },
+        {
+            "letter": "æ",
+            "height": "nearOpen",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "ɐ",
+            "height": "nearOpen",
+            "backness": "central",
+            "isRounded": true
+        },
+        {
+            "letter": "a",
+            "height": "open",
+            "backness": "front",
+            "isRounded": false
+        },
+        {
+            "letter": "ɶ",
+            "height": "open",
+            "backness": "front",
+            "isRounded": true
+        },
+        {
+            "letter": "ä",
+            "height": "open",
+            "backness": "central",
+            "isRounded": false
+        },
+        {
+            "letter": "ɑ",
+            "height": "open",
+            "backness": "back",
+            "isRounded": false
+        },
+        {
+            "letter": "ɒ",
+            "height": "open",
+            "backness": "back",
+            "isRounded": true
+        }
+    ]
+}
