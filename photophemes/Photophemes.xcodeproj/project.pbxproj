@@ -27,6 +27,9 @@
 		BB4675C2240620EA0017ED2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4675C0240620EA0017ED2F /* Main.storyboard */; };
 		BB4675C4240620EB0017ED2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4675C3240620EB0017ED2F /* Assets.xcassets */; };
 		BB4675C7240620EB0017ED2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4675C5240620EB0017ED2F /* LaunchScreen.storyboard */; };
+		BBCCCADC240C859F006F46ED /* Consonant+HSBRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCCCADB240C859F006F46ED /* Consonant+HSBRepresentable.swift */; };
+		BBCCCADE240C85BA006F46ED /* Double+HueValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCCCADD240C85BA006F46ED /* Double+HueValue.swift */; };
+		BBCCCAE0240C85DA006F46ED /* Vowel+HSBRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCCCADF240C85DA006F46ED /* Vowel+HSBRepresentable.swift */; };
 		BBEAB340240A2C7B001DE616 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAB33F240A2C7B001DE616 /* Language.swift */; };
 		BBEAB342240A2FB2001DE616 /* PhoneMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAB341240A2FB2001DE616 /* PhoneMap.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,9 @@
 		BB4675C3240620EB0017ED2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB4675C6240620EB0017ED2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4675C8240620EB0017ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCCCADB240C859F006F46ED /* Consonant+HSBRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consonant+HSBRepresentable.swift"; sourceTree = "<group>"; };
+		BBCCCADD240C85BA006F46ED /* Double+HueValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+HueValue.swift"; sourceTree = "<group>"; };
+		BBCCCADF240C85DA006F46ED /* Vowel+HSBRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vowel+HSBRepresentable.swift"; sourceTree = "<group>"; };
 		BBEAB33F240A2C7B001DE616 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BBEAB341240A2FB2001DE616 /* PhoneMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				BB4675BE240620EA0017ED2F /* ViewController.swift */,
-				BB024635240B73C600F84210 /* HSBRepresentable.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				BB2CBB04240769840055BDE5 /* CanvasView.swift */,
+				BB024635240B73C600F84210 /* HSBRepresentable.swift */,
+				BBCCCADB240C859F006F46ED /* Consonant+HSBRepresentable.swift */,
+				BBCCCADF240C85DA006F46ED /* Vowel+HSBRepresentable.swift */,
+				BBCCCADD240C85BA006F46ED /* Double+HueValue.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,14 +233,17 @@
 			files = (
 				BB2CBAFA240767670055BDE5 /* Manner.swift in Sources */,
 				BB2CBAF42407662A0055BDE5 /* Phone.swift in Sources */,
+				BBCCCAE0240C85DA006F46ED /* Vowel+HSBRepresentable.swift in Sources */,
 				BB2CBAFC240767820055BDE5 /* Height.swift in Sources */,
 				BB2CBAF62407665E0055BDE5 /* Vowel.swift in Sources */,
+				BBCCCADC240C859F006F46ED /* Consonant+HSBRepresentable.swift in Sources */,
 				BB4675BF240620EA0017ED2F /* ViewController.swift in Sources */,
 				BB2CBAF22407651E0055BDE5 /* Consonant.swift in Sources */,
 				BB4675BB240620EA0017ED2F /* AppDelegate.swift in Sources */,
 				BB2CBAF8240767520055BDE5 /* Place.swift in Sources */,
 				BBEAB340240A2C7B001DE616 /* Language.swift in Sources */,
 				BB2CBB05240769840055BDE5 /* CanvasView.swift in Sources */,
+				BBCCCADE240C85BA006F46ED /* Double+HueValue.swift in Sources */,
 				BB4675BD240620EA0017ED2F /* SceneDelegate.swift in Sources */,
 				BB2CBB0E24076D8B0055BDE5 /* Poem.swift in Sources */,
 				BB024636240B73C600F84210 /* HSBRepresentable.swift in Sources */,
