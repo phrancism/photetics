@@ -46,11 +46,9 @@ class ViewController: UIViewController {
 
         let poem = Poem(language: currentLanguage).rawString
         let poemNoSpaces = poem.replacingOccurrences(of: " ", with: "")
-        print(poemNoSpaces)
         let colors: [UIColor] = poemNoSpaces.map { letter in
             guard let photopheme = createPhotopheme(for: String(letter))
                 else {
-                    print(letter)
                     return UIColor.black
                 }
 
