@@ -54,35 +54,36 @@ class ViewController: UIViewController {
 
             return photopheme
         }
-        
+        print(poemNoSpaces)
         guard let view = sender.view else { return }
         
         animateBeaconStyle(withColors: colors, onView: view)
     }
     
     func animateBeaconStyle(withColors colors: [UIColor], onView view: UIView) {
-        let overallDuration = Double(colors.count) + 5.0
-        let colorDuration = 1.0 / overallDuration
-        let lineBreakDuration = 2.0 / overallDuration
-        let originalBackgroundColor = view.backgroundColor
+        let overallDuration = 60.0
+        let relativeDuration = colors.count.asDouble.reciprocal
         UIView.animateKeyframes(withDuration: overallDuration, delay: 0, options: [.calculationModeLinear], animations: {
                 for (index, color) in colors.enumerated() {
-                    let duration = color == UIColor.black ? colorDuration : lineBreakDuration
-                    UIView.addKeyframe(withRelativeStartTime: Double(index) / overallDuration,
-                                       relativeDuration: duration,
+                    UIView.addKeyframe(withRelativeStartTime: index.asDouble * relativeDuration,
+                                       relativeDuration: relativeDuration,
                                        animations: { view.backgroundColor = color })
                 }
-                UIView.addKeyframe(withRelativeStartTime: 1.0 - colorDuration,
-                                   relativeDuration: colorDuration,
-                                   animations: { view.backgroundColor = originalBackgroundColor })
         })
     }
 }
 
 extension ViewController {
-    var defaultColor: UIColor { .black }
+    enum Constants {
+        static let defaultColor: UIColor = .black
+    }
 }
 
 extension Double {
     var cgFloat: CGFloat { CGFloat(self) }
+    var reciprocal: Double { 1 / self }
+}
+
+extension Int {
+    var asDouble: Double { Double(self) }
 }
