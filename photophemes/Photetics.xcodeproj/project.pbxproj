@@ -49,7 +49,7 @@
 		BB2CBB0824076D510055BDE5 /* poem-en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-en.txt"; sourceTree = "<group>"; };
 		BB2CBB0924076D510055BDE5 /* poem-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-it.txt"; sourceTree = "<group>"; };
 		BB2CBB0D24076D8B0055BDE5 /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
-		BB4675B7240620EA0017ED2F /* photophemes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photophemes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4675B7240620EA0017ED2F /* photetics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photetics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4675BA240620EA0017ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB4675BC240620EA0017ED2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB4675BE240620EA0017ED2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		BB4675AE240620EA0017ED2F = {
 			isa = PBXGroup;
 			children = (
-				BB4675B9240620EA0017ED2F /* photophemes */,
+				BB4675B9240620EA0017ED2F /* photetics */,
 				BB4675B8240620EA0017ED2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,12 +134,12 @@
 		BB4675B8240620EA0017ED2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB4675B7240620EA0017ED2F /* photophemes.app */,
+				BB4675B7240620EA0017ED2F /* photetics.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB4675B9240620EA0017ED2F /* photophemes */ = {
+		BB4675B9240620EA0017ED2F /* photetics */ = {
 			isa = PBXGroup;
 			children = (
 				BB2CBB02240768EC0055BDE5 /* Models */,
@@ -153,15 +153,15 @@
 				BB4675C5240620EB0017ED2F /* LaunchScreen.storyboard */,
 				BB4675C8240620EB0017ED2F /* Info.plist */,
 			);
-			path = photophemes;
+			path = photetics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB4675B6240620EA0017ED2F /* photophemes */ = {
+		BB4675B6240620EA0017ED2F /* photetics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB4675CB240620EB0017ED2F /* Build configuration list for PBXNativeTarget "photophemes" */;
+			buildConfigurationList = BB4675CB240620EB0017ED2F /* Build configuration list for PBXNativeTarget "photetics" */;
 			buildPhases = (
 				BB4675B3240620EA0017ED2F /* Sources */,
 				BB4675B4240620EA0017ED2F /* Frameworks */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = photophemes;
+			name = photetics;
 			productName = photophemes;
-			productReference = BB4675B7240620EA0017ED2F /* photophemes.app */;
+			productReference = BB4675B7240620EA0017ED2F /* photetics.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB4675B2240620EA0017ED2F /* Build configuration list for PBXProject "Photophemes" */;
+			buildConfigurationList = BB4675B2240620EA0017ED2F /* Build configuration list for PBXProject "Photetics" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB4675B6240620EA0017ED2F /* photophemes */,
+				BB4675B6240620EA0017ED2F /* photetics */,
 			);
 		};
 /* End PBXProject section */
@@ -393,13 +393,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = photophemes/Info.plist;
+				INFOPLIST_FILE = photetics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phrancism.photophemes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phrancism.photetics;
+				PRODUCT_NAME = photetics;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,13 +410,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = photophemes/Info.plist;
+				INFOPLIST_FILE = photetics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phrancism.photophemes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phrancism.photetics;
+				PRODUCT_NAME = photetics;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB4675B2240620EA0017ED2F /* Build configuration list for PBXProject "Photophemes" */ = {
+		BB4675B2240620EA0017ED2F /* Build configuration list for PBXProject "Photetics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB4675C9240620EB0017ED2F /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB4675CB240620EB0017ED2F /* Build configuration list for PBXNativeTarget "photophemes" */ = {
+		BB4675CB240620EB0017ED2F /* Build configuration list for PBXNativeTarget "photetics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB4675CC240620EB0017ED2F /* Debug */,
