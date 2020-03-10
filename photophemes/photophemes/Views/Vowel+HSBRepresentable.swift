@@ -15,9 +15,7 @@ extension Vowel: HSBRepresentable {
         return (value + 60.0).hueValue
     }
     
-    var saturation: Double { 1.0 }
-    
-    var brightness: Double {
+    var saturation: Double {
         switch height {
         case .close: return 0.9
         case .nearClose: return 0.8
@@ -28,4 +26,6 @@ extension Vowel: HSBRepresentable {
         case .open: return 0.3
         }
     }
+    
+    var brightness: Double { 0.8 }
 }
