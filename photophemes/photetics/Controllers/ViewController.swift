@@ -16,10 +16,10 @@ class ViewController: UIViewController {
 //        let lineArray = line.map { String($0) }
 //        print(lineArray)
 //        let colors: [CGColor] = lineArray.map { char in
-//            guard let photopheme = createPhotopheme(for: char)
+//            guard let color = makeColor(for: char)
 //                else { return defaultColor.cgColor }
 //
-//            return photopheme.cgColor
+//            return color.cgColor
 //        }
 //
 //        let gradientLayer = CAGradientLayer()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 //        canvas.layer.addSublayer(gradientLayer)
     }
     
-    private func createPhotopheme(for phoneString: String) -> UIColor? {
+    private func makeColor(for phoneString: String) -> UIColor? {
         guard let phone = PhoneMap.default[phoneString],
             let phoneHSL = phone as? HSBRepresentable
             else { return nil }
@@ -47,12 +47,12 @@ class ViewController: UIViewController {
         let poem = Poem(language: currentLanguage).rawString
         let poemNoSpaces = poem.replacingOccurrences(of: " ", with: "")
         let colors: [UIColor] = poemNoSpaces.map { letter in
-            guard let photopheme = createPhotopheme(for: String(letter))
+            guard let color = makeColor(for: String(letter))
                 else {
                     return UIColor.black
                 }
 
-            return photopheme
+            return color
         }
         print(poemNoSpaces)
         guard let view = sender.view else { return }

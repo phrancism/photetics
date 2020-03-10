@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  photophemes
-//
-//  Created by Francis Mariano on 2/25/20.
-//  Copyright © 2020 Francis Mariano. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
