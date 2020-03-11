@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var canvas: UIView!
     
     private let currentLanguage: Language = .english
+    private lazy var poem = Poem(language: currentLanguage).rawString
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,36 +13,39 @@ class ViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
         canvas.addGestureRecognizer(tapGestureRecognizer)
         
+        let lines = poem.replacingOccurrences(of: " ", with: "").components(separatedBy: "\n")
+        
         for n in 0...4 {
+            // Make line view
             let oneFifthCanvasHeight = (canvas.frame.height / 5)
-            let lineViewWidth = canvas.frame.width - 48
-            let lineViewHeight = oneFifthCanvasHeight - 72
+            let lineViewWidth = canvas.frame.width - Constants.horizontalPadding * 2
+            let lineViewHeight = oneFifthCanvasHeight - 96
             let rect = CGRect(x: Constants.horizontalPadding,
-                              y: oneFifthCanvasHeight * CGFloat(n) + 24,
+                              y: oneFifthCanvasHeight * CGFloat(n) + 48,
                               width: lineViewWidth,
                               height: lineViewHeight
                         )
             let lineView = UIView(frame: rect)
-            print(canvas.frame)
-            print(canvas.bounds)
             lineView.backgroundColor = UIColor.white
+            
+            // Make gradient layer for view
+            let line = lines[n]
+            let lineArray = line.map(String.init)
+            let colors: [CGColor] = lineArray.map { char in
+                guard let color = makeColor(for: char)
+                    else { return Constants.defaultColor.cgColor }
+
+                return color.cgColor
+            }
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = lineView.bounds
+            gradientLayer.colors = colors
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+            lineView.layer.addSublayer(gradientLayer)
+            
             canvas.addSubview(lineView)
         }
-
-//        let line = getPoemLines(language: currentLanguage)[4].replacingOccurrences(of: " ", with: "")
-//        let lineArray = line.map { String($0) }
-//        print(lineArray)
-//        let colors: [CGColor] = lineArray.map { char in
-//            guard let color = makeColor(for: char)
-//                else { return defaultColor.cgColor }
-//
-//            return color.cgColor
-//        }
-//
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = canvas.bounds
-//        gradientLayer.colors = colors
-//        canvas.layer.addSublayer(gradientLayer)
     }
     
     private func makeColor(for phoneString: String) -> UIColor? {
@@ -60,7 +64,6 @@ class ViewController: UIViewController {
     @objc
     func tapViewHandler(_ sender: UITapGestureRecognizer) {
 
-        let poem = Poem(language: currentLanguage).rawString
         let poemNoSpaces = poem.replacingOccurrences(of: " ", with: "")
         let colors: [UIColor] = poemNoSpaces.map { letter in
             guard let color = makeColor(for: String(letter))
@@ -70,7 +73,7 @@ class ViewController: UIViewController {
 
             return color
         }
-        print(poemNoSpaces)
+        
         guard let view = sender.view else { return }
         
         animateBeaconStyle(withColors: colors, onView: view)
@@ -92,7 +95,7 @@ class ViewController: UIViewController {
 extension ViewController {
     enum Constants {
         static let defaultColor: UIColor = .black
-        static let horizontalPadding: CGFloat = 24.0
+        static let horizontalPadding: CGFloat = 48.0
     }
 }
 
