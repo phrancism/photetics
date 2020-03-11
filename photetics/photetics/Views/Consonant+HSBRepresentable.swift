@@ -29,5 +29,5 @@ extension Consonant: HSBRepresentable {
         }
     }
     
-    var brightness: Double { isVoiced ? 0.5 : 0.6 }
+    var brightness: Double { isVoiced ? 0.4 : 0.6 }
 }
