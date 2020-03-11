@@ -3,18 +3,18 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
-    
-    private let currentLanguage: Language = .english
+
+    private let currentLanguage: Language = .tagalog
     private lazy var poem = Poem(language: currentLanguage).rawString
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
         canvas.addGestureRecognizer(tapGestureRecognizer)
-        
+
         let lines = poem.replacingOccurrences(of: " ", with: "").components(separatedBy: "\n")
-        
+
         for n in 0...4 {
             // Make line view
             let oneFifthCanvasHeight = (canvas.frame.height / 5)
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                         )
             let lineView = UIView(frame: rect)
             lineView.backgroundColor = UIColor.white
-            
+
             // Make gradient layer for view
             let line = lines[n]
             let lineArray = line.map(String.init)
@@ -43,16 +43,16 @@ class ViewController: UIViewController {
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
             gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
             lineView.layer.addSublayer(gradientLayer)
-            
+
             canvas.addSubview(lineView)
         }
     }
-    
+
     private func makeColor(for phoneString: String) -> UIColor? {
         guard let phone = PhoneMap.default[phoneString],
             let phoneHSL = phone as? HSBRepresentable
             else { return nil }
-        
+
         return UIColor(
             hue: phoneHSL.hue.cgFloat,
             saturation: phoneHSL.saturation.cgFloat,
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             alpha: 1
         )
     }
-    
+
     @objc
     func tapViewHandler(_ sender: UITapGestureRecognizer) {
 
@@ -73,12 +73,12 @@ class ViewController: UIViewController {
 
             return color
         }
-        
+
         guard let view = sender.view else { return }
-        
+
         animateBeaconStyle(withColors: colors, onView: view)
     }
-    
+
     func animateBeaconStyle(withColors colors: [UIColor], onView view: UIView) {
         let overallDuration = 45.0
         let relativeDuration = colors.count.asDouble.reciprocal

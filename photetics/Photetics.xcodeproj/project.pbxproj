@@ -16,7 +16,6 @@
 		BB2CBAFC240767820055BDE5 /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAFB240767820055BDE5 /* Height.swift */; };
 		BB2CBAFE240767960055BDE5 /* Backness.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBAFD240767960055BDE5 /* Backness.swift */; };
 		BB2CBB002407688D0055BDE5 /* phones.json in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBAFF2407688D0055BDE5 /* phones.json */; };
-		BB2CBB05240769840055BDE5 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CBB04240769840055BDE5 /* CanvasView.swift */; };
 		BB2CBB0A24076D510055BDE5 /* poem-tl.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBB0724076D510055BDE5 /* poem-tl.txt */; };
 		BB2CBB0B24076D510055BDE5 /* poem-en.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBB0824076D510055BDE5 /* poem-en.txt */; };
 		BB2CBB0C24076D510055BDE5 /* poem-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = BB2CBB0924076D510055BDE5 /* poem-it.txt */; };
@@ -44,7 +43,6 @@
 		BB2CBAFB240767820055BDE5 /* Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Height.swift; sourceTree = "<group>"; };
 		BB2CBAFD240767960055BDE5 /* Backness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backness.swift; sourceTree = "<group>"; };
 		BB2CBAFF2407688D0055BDE5 /* phones.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phones.json; sourceTree = "<group>"; };
-		BB2CBB04240769840055BDE5 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		BB2CBB0724076D510055BDE5 /* poem-tl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-tl.txt"; sourceTree = "<group>"; };
 		BB2CBB0824076D510055BDE5 /* poem-en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-en.txt"; sourceTree = "<group>"; };
 		BB2CBB0924076D510055BDE5 /* poem-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "poem-it.txt"; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		BB2CBB06240769910055BDE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CBB04240769840055BDE5 /* CanvasView.swift */,
 				BB024635240B73C600F84210 /* HSBRepresentable.swift */,
 				BBCCCADB240C859F006F46ED /* Consonant+HSBRepresentable.swift */,
 				BBCCCADF240C85DA006F46ED /* Vowel+HSBRepresentable.swift */,
@@ -242,7 +239,6 @@
 				BB4675BB240620EA0017ED2F /* AppDelegate.swift in Sources */,
 				BB2CBAF8240767520055BDE5 /* Place.swift in Sources */,
 				BBEAB340240A2C7B001DE616 /* Language.swift in Sources */,
-				BB2CBB05240769840055BDE5 /* CanvasView.swift in Sources */,
 				BBCCCADE240C85BA006F46ED /* Double+HueValue.swift in Sources */,
 				BB4675BD240620EA0017ED2F /* SceneDelegate.swift in Sources */,
 				BB2CBB0E24076D8B0055BDE5 /* Poem.swift in Sources */,

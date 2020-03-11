@@ -2,11 +2,11 @@ import Foundation
 
 final class PhoneMap {
     static let `default` = PhoneMap()
-    
+
     private let map: [String: Phone]
-    
+
     private init() {
-        
+
         guard let url = Bundle.main.url(forResource: "phones", withExtension: "json")
             else { fatalError("Phones JSON file could not be found") }
 
@@ -19,10 +19,10 @@ final class PhoneMap {
         var map: [String: Phone] = [:]
         phonesData.consonants.forEach{ map[$0.letter] = $0 }
         phonesData.vowels.forEach{ map[$0.letter] = $0 }
-        
+
         self.map = map
     }
-    
+
     subscript(phoneString: String) -> Phone? {
         return map[phoneString]
     }

@@ -9,12 +9,12 @@ extension Vowel: HSBRepresentable {
             case .back: return 240.0
             }
         }()
-        
+
         guard isRounded else { return value.hueValue }
-        
+
         return (value + 60.0).hueValue
     }
-    
+
     var saturation: Double {
             switch height {
             case .close: return 0.9
@@ -26,6 +26,6 @@ extension Vowel: HSBRepresentable {
             case .open: return 0.60
         }
     }
-    
+
     var brightness: Double { 0.5 }
 }

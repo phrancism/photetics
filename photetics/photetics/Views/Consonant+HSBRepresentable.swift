@@ -16,7 +16,7 @@ extension Consonant: HSBRepresentable {
         case .glottal: return 300.0.hueValue
         }
     }
-        
+
     var saturation: Double {
         switch manner {
         case .plosive: return 0.9
@@ -30,6 +30,6 @@ extension Consonant: HSBRepresentable {
         case .lateralApproximant: return 0.1
         }
     }
-    
+
     var brightness: Double { isVoiced ? 0.4 : 0.6 }
 }
