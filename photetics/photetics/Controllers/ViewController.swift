@@ -11,6 +11,22 @@ class ViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
         canvas.addGestureRecognizer(tapGestureRecognizer)
+        
+        for n in 0...4 {
+            let oneFifthCanvasHeight = (canvas.frame.height / 5)
+            let lineViewWidth = canvas.frame.width - 48
+            let lineViewHeight = oneFifthCanvasHeight - 72
+            let rect = CGRect(x: Constants.horizontalPadding,
+                              y: oneFifthCanvasHeight * CGFloat(n) + 24,
+                              width: lineViewWidth,
+                              height: lineViewHeight
+                        )
+            let lineView = UIView(frame: rect)
+            print(canvas.frame)
+            print(canvas.bounds)
+            lineView.backgroundColor = UIColor.white
+            canvas.addSubview(lineView)
+        }
 
 //        let line = getPoemLines(language: currentLanguage)[4].replacingOccurrences(of: " ", with: "")
 //        let lineArray = line.map { String($0) }
@@ -61,9 +77,9 @@ class ViewController: UIViewController {
     }
     
     func animateBeaconStyle(withColors colors: [UIColor], onView view: UIView) {
-        let overallDuration = 60.0
+        let overallDuration = 45.0
         let relativeDuration = colors.count.asDouble.reciprocal
-        UIView.animateKeyframes(withDuration: overallDuration, delay: 0, options: [.calculationModeLinear], animations: {
+        UIView.animateKeyframes(withDuration: overallDuration, delay: 0, options: [.calculationModePaced], animations: {
                 for (index, color) in colors.enumerated() {
                     UIView.addKeyframe(withRelativeStartTime: index.asDouble * relativeDuration,
                                        relativeDuration: relativeDuration,
@@ -76,6 +92,7 @@ class ViewController: UIViewController {
 extension ViewController {
     enum Constants {
         static let defaultColor: UIColor = .black
+        static let horizontalPadding: CGFloat = 24.0
     }
 }
 
