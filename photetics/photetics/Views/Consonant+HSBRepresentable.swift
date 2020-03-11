@@ -4,14 +4,16 @@ extension Consonant: HSBRepresentable {
     var hue: Double {
         switch place {
         case .bilabial: return 0.0.hueValue
-        case .labiodental: return 45.0.hueValue
-        case .dental: return 90.0.hueValue
-        case .alveolar: return 135.0.hueValue
-        case .postalveolar: return 180.0.hueValue
-        case .palatal: return 225.0.hueValue
-        case .velar: return 270.0.hueValue
-        case .glottal: return 315.0.hueValue
-        default: return 1.0
+        case .labiodental: return 30.0.hueValue
+        case .dental: return 60.0.hueValue
+        case .alveolar: return 90.0.hueValue
+        case .postalveolar: return 120.0.hueValue
+        case .retroflex: return 150.hueValue
+        case .palatal: return 180.0.hueValue
+        case .velar: return 210.0.hueValue
+        case .uvular: return 240.hueValue
+        case .pharyngeal: return 270.0.hueValue
+        case .glottal: return 300.0.hueValue
         }
     }
         
