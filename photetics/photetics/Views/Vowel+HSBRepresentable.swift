@@ -15,17 +15,17 @@ extension Vowel: HSBRepresentable {
         return (value + 60.0).hueValue
     }
 
-    var saturation: Double {
-            switch height {
-            case .close: return 0.9
-            case .nearClose: return 0.85
-            case .closeMid: return 0.8
-            case .mid: return 0.75
-            case .openMid: return 0.7
-            case .nearOpen: return 0.65
-            case .open: return 0.60
+    var saturation: Double { 1.0 }
+
+    var brightness: Double {
+        switch height {
+        case .close: return 0.9
+        case .nearClose: return 0.81
+        case .closeMid: return 0.72
+        case .mid: return 0.63
+        case .openMid: return 0.54
+        case .nearOpen: return 0.45
+        case .open: return 0.36
         }
     }
-
-    var brightness: Double { 0.5 }
 }
