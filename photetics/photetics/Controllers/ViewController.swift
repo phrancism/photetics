@@ -4,54 +4,35 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
 
-    private let currentLanguage: Language = .tagalog
+    private let currentLanguage: Language = .english
     private lazy var poem = Poem(language: currentLanguage).rawString
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//      For an 'oral' representation
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
         canvas.addGestureRecognizer(tapGestureRecognizer)
 
+//      For a 'written' representation'
+        drawStanza()
+    }
+
+    private func drawStanza() {
         let lines = poem.replacingOccurrences(of: " ", with: "").components(separatedBy: "\n")
 
-        for n in 0...4 {
-            // Make line view
-            let oneFifthCanvasHeight = (canvas.frame.height / 5)
-            let lineViewWidth = canvas.frame.width - Constants.horizontalPadding * 2
-            let lineViewHeight = oneFifthCanvasHeight - 96
-            let rect = CGRect(x: Constants.horizontalPadding,
-                              y: oneFifthCanvasHeight * CGFloat(n) + 48,
-                              width: lineViewWidth,
-                              height: lineViewHeight
-                        )
-            let lineView = UIView(frame: rect)
-            lineView.backgroundColor = UIColor.white
-
-            // Make gradient layer for view
-            let line = lines[n]
-            let lineArray = line.map(String.init)
-            let colors: [CGColor] = lineArray.map { char in
-                guard let color = makeColor(for: char)
-                    else { return Constants.defaultColor.cgColor }
-
-                return color.cgColor
-            }
-            let gradientLayer = CAGradientLayer()
-            gradientLayer.frame = lineView.bounds
-            gradientLayer.colors = colors
-            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+        for n in 0..<lines.count {
+            let lineView = makeLineViewForLineAt(index: n)
+            let gradientLayer = makeGradientLayerFor(line: lines[n], view: lineView)
             lineView.layer.addSublayer(gradientLayer)
-
             canvas.addSubview(lineView)
         }
     }
 
-    private func makeColor(for phoneString: String) -> UIColor? {
+    private func makeColorFor(phoneString: String) -> UIColor {
         guard let phone = PhoneMap.default[phoneString],
             let phoneHSL = phone as? HSBRepresentable
-            else { return nil }
+            else { return Constants.defaultColor }
 
         return UIColor(
             hue: phoneHSL.hue.cgFloat,
@@ -60,27 +41,45 @@ class ViewController: UIViewController {
             alpha: 1
         )
     }
+    
+    private func makeLineViewForLineAt(index: Int) -> UIView {
+        let oneFifthCanvasHeight = (canvas.frame.height / 5)
+        let lineViewWidth = canvas.frame.width - Constants.horizontalPadding * 2
+        let lineViewHeight = oneFifthCanvasHeight - 96
+        let rect = CGRect(x: Constants.horizontalPadding,
+                          y: oneFifthCanvasHeight * CGFloat(index) + 48,
+                          width: lineViewWidth,
+                          height: lineViewHeight
+                    )
+        let lineView = UIView(frame: rect)
+
+        return lineView
+    }
+    
+    private func makeGradientLayerFor(line: String, view: UIView) -> CAGradientLayer {
+        let colors: [CGColor] = line.map { makeColorFor(phoneString: String($0)).cgColor }
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+
+        return gradientLayer
+    }
 
     @objc
     func tapViewHandler(_ sender: UITapGestureRecognizer) {
 
         let poemNoSpaces = poem.replacingOccurrences(of: " ", with: "")
-        let colors: [UIColor] = poemNoSpaces.map { letter in
-            guard let color = makeColor(for: String(letter))
-                else {
-                    return UIColor.black
-                }
-
-            return color
-        }
+        let colors: [UIColor] = poemNoSpaces.map { makeColorFor(phoneString: String($0)) }
 
         guard let view = sender.view else { return }
 
-        animateBeaconStyle(withColors: colors, onView: view)
+        animateSpeechStyle(withColors: colors, onView: view)
     }
 
-    func animateBeaconStyle(withColors colors: [UIColor], onView view: UIView) {
-        let overallDuration = 45.0
+    func animateSpeechStyle(withColors colors: [UIColor], onView view: UIView) {
+        let overallDuration = 30.0
         let relativeDuration = colors.count.asDouble.reciprocal
         UIView.animateKeyframes(withDuration: overallDuration, delay: 0, options: [.calculationModePaced], animations: {
                 for (index, color) in colors.enumerated() {
