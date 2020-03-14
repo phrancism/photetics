@@ -11,11 +11,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
 //      For an 'oral' representation
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
-        canvas.addGestureRecognizer(tapGestureRecognizer)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapViewHandler(_:)))
+//        canvas.addGestureRecognizer(tapGestureRecognizer)
 
 //      For a 'written' representation'
-        drawStanza()
+//        drawStanza()
     }
 
     private func drawStanza() {
