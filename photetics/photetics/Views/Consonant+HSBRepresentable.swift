@@ -17,19 +17,19 @@ extension Consonant: HSBRepresentable {
         }
     }
 
-    var saturation: Double {
+    var saturation: Double { isVoiced ? 0.5 : 0.75 }
+
+    var brightness: Double {
         switch manner {
         case .plosive: return 0.9
-        case .nasal: return 0.8
-        case .trill: return 0.7
-        case .flap: return 0.6
-        case .fricative: return 0.5
-        case .affricate: return 0.4
-        case .lateralFricative: return 0.3
-        case .approximant: return 0.2
-        case .lateralApproximant: return 0.1
+        case .nasal: return 0.81
+        case .trill: return 0.72
+        case .flap: return 0.63
+        case .fricative: return 0.54
+        case .affricate: return 0.45
+        case .lateralFricative: return 0.36
+        case .approximant: return 0.27
+        case .lateralApproximant: return 0.18
         }
     }
-
-    var brightness: Double { isVoiced ? 0.4 : 0.6 }
 }
