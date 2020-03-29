@@ -18,9 +18,9 @@ class ViewController: UIViewController {
 //        drawStanza()
 
 //      For another 'oral' representation
-        drawDots()
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(flowerStyleTapHandler(_:)))
-        canvas.addGestureRecognizer(tapGestureRecognizer)
+//        drawDots()
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(flowerStyleTapHandler(_:)))
+//        canvas.addGestureRecognizer(tapGestureRecognizer)
     }
 
     private func drawStanza() {
