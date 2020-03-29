@@ -52,14 +52,15 @@ class ViewController: UIViewController {
     }
     
     private func makeLineViewForLineAt(index: Int) -> UIView {
-        let oneFifthCanvasHeight = (canvas.frame.height / 5)
+        let oneEightCanvasHeight = (canvas.frame.height / 8)
         let lineViewWidth = canvas.frame.width - Constants.horizontalPadding * 2
-        let lineViewHeight = oneFifthCanvasHeight - 96
-        let rect = CGRect(x: Constants.horizontalPadding,
-                          y: oneFifthCanvasHeight * CGFloat(index) + 48,
+        let lineViewHeight = oneEightCanvasHeight
+        let rect = CGRect(x: CGFloat.zero,
+                          y: (oneEightCanvasHeight + 40) * CGFloat(index),
                           width: lineViewWidth,
                           height: lineViewHeight
-                    )
+        ).offsetBy(dx: Constants.horizontalPadding, dy: 96.0)
+
         let lineView = UIView(frame: rect)
 
         return lineView
