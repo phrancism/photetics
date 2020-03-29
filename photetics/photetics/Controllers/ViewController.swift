@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         let radius: CGFloat = Constants.flowerRadius
         let strideIncrement = Constants.flowerAngleInterval
 
-        for (i, angle) in stride(from: -CGFloat.pi / 2, to: 3 * CGFloat.pi / 2, by: strideIncrement).enumerated() {
+        for angle in stride(from: -CGFloat.pi / 2, to: 3 * CGFloat.pi / 2, by: strideIncrement) {
             let positionX = (canvas.bounds.midX) + radius * cos(angle)
             let positionY = (canvas.bounds.midY) + radius * sin(angle)
             let dotViewRect = CGRect(
