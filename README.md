@@ -1,3 +1,2 @@
 # photetics
-
-Transforming sound to light
+More information [here](https://phrancism.com/inimitable-cities).
