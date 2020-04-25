@@ -1,21 +1,15 @@
 import Foundation
 
 extension Vowel: HSBRepresentable {
-    var hue: Double {
-        let value: Double = {
-            switch backness {
-            case .front: return 0.0
-            case .central: return 120.0
-            case .back: return 240.0
-            }
-        }()
+    var hue: Double { 330.hueValue }
 
-        guard isRounded else { return value.hueValue }
-
-        return (value + 60.0).hueValue
+    var saturation: Double {
+        switch backness {
+        case .front: return 0.33
+        case .central: return 0.67
+        case .back: return 1.0
+        }
     }
-
-    var saturation: Double { 1.0 }
 
     var brightness: Double {
         switch height {

@@ -4,7 +4,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
 
-    private let currentLanguage: Language = .english
+    private let currentLanguage: Language = .italian
     private lazy var poem = Poem(language: currentLanguage).rawString
 
     override func viewDidLoad() {
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 //        canvas.addGestureRecognizer(tapGestureRecognizer)
 
 //      For a 'written' representation'
-//        drawStanza()
+        drawStanza()
 
 //      For another 'oral' representation
 //        drawDots()
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     }
 
     func animateSpeechStyleWith(colors: [UIColor], onView view: UIView) {
-        let overallDuration = 30.0
+        let overallDuration = 45.0
         let relativeDuration = colors.count.asDouble.reciprocal
         UIView.animateKeyframes(withDuration: overallDuration, delay: 0, options: [.calculationModePaced], animations: {
                 for (index, color) in colors.enumerated() {
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
         let radius: CGFloat = Constants.flowerRadius
         let strideIncrement = Constants.flowerAngleInterval
 
-        for angle in stride(from: -CGFloat.pi / 2, to: 3 * CGFloat.pi / 2, by: strideIncrement) {
+        for angle in stride(from: CGFloat.zero, to: 2 * .pi, by: strideIncrement) {
             let positionX = (canvas.bounds.midX) + radius * cos(angle)
             let positionY = (canvas.bounds.midY) + radius * sin(angle)
             let dotViewRect = CGRect(
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
                     else { continue }
 
                 let color = self.makeColorFor(phone: phoneHSB)
-                let viewIndex = Int(phoneHSB.hue * 12)
+                let viewIndex = Int(phoneHSB.hue * 13)
                 let dotView = view.subviews[viewIndex]
 
                 UIView.addKeyframe(withRelativeStartTime: letterIndex.asDouble * relativeDuration,
@@ -162,7 +162,7 @@ extension ViewController {
         static let dotRadius: CGFloat = 20.0
         static var dotDiameter: CGFloat { dotRadius * 2 }
         static let flowerRadius: CGFloat = 150.0
-        static let flowerAngleInterval: CGFloat = 8 * CGFloat.pi / 44
+        static let flowerAngleInterval: CGFloat = .pi / 6
         static let defaultColor: UIColor = .black
         static let horizontalPadding: CGFloat = 48.0
     }
